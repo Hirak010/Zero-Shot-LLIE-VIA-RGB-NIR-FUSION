@@ -47,6 +47,49 @@ The `combined_pipeline.py` script executes the following major steps for each RG
 
 It is highly recommended to use a virtual environment.
 
+## Dataset
+
+This project was tested using the **[DATASET_NAME_HERE]**. You will need to download it to run the experiments or test the pipeline with the intended data.
+
+**Download Instructions:**
+
+1.  **Download the dataset:**
+    *   You can download the dataset from the following link:
+        [Download [DATASET_NAME_HERE]]([(https://drive.google.com/drive/folders/13yNug9MPXR1nqLD2K9R2QDxbNnoDXvjI?usp=drive_link)])
+    *   *(Optional: Add any specific instructions about the download, e.g., if registration is required, if it's a large file, if it's split into parts, etc.)*
+
+2.  **Extract the dataset (if applicable):**
+    *   If the downloaded file is a `.zip`, `.tar.gz`, or similar archive, extract its contents to a known location on your computer.
+
+3.  **Organize the dataset for the pipeline:**
+    *   Once downloaded and extracted, you need to organize the RGB and NIR image pairs into separate directories as expected by the `combined_pipeline.py` script.
+    *   Create two main folders, for example, `Dataset_RGB/` and `Dataset_NIR/`.
+    *   Place all the low-light RGB images from the dataset into `Dataset_RGB/`.
+    *   Place all the corresponding NIR images into `Dataset_NIR/`.
+    *   **Crucially, ensure that an RGB image and its corresponding NIR image have the exact same filename stem (the part of the name before the extension).** For example, `Dataset_RGB/scene01.png` must correspond to `Dataset_NIR/scene01.png`.
+
+    Your dataset directory structure should look something like this before running the script:
+    ```
+    path/to/your/downloaded_dataset/
+    ├── Dataset_RGB/
+    │   ├── image1.png
+    │   ├── image2.jpg
+    │   └── ...
+    └── Dataset_NIR/
+        ├── image1.png
+        ├── image2.jpg
+        └── ...
+    ```
+
+4.  **Update Script Arguments:**
+    When running `combined_pipeline.py`, you will then point the `--rgb_dir` and `--nir_dir` arguments to these prepared directories:
+    ```bash
+    python combined_pipeline.py \
+        --rgb_dir "path/to/your/downloaded_dataset/Dataset_RGB" \
+        --nir_dir "path/to/your/downloaded_dataset/Dataset_NIR" \
+        ... # other arguments
+    ```
+
 ## Setup
 
 1.  **Clone the repository:**
