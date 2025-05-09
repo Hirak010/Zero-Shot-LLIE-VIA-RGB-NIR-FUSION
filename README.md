@@ -5,6 +5,8 @@ A Zero-Shot approach to low light image enhancement using RGB-NIR Implicit Fusio
 
 Low-light conditions significantly degrade image quality, impacting both human perception and computer vision tasks. This thesis proposes a zero-shot pipeline that enhances low-light RGB images by leveraging synchronized Near-Infrared (NIR) captures. The method first uses a modified CoLIE approach to generate an initial enhancement of the RGB image's value (brightness) channel. This enhanced RGB image is then fused with structural details extracted from the corresponding NIR image. Finally, a guided filter, using the NIR image as a guide, is applied for denoising and refining the output. The "zero-shot" aspect means the model optimizes itself for each input image pair without requiring pre-trained weights on a large dataset.
 
+![Architecture Diagram](img/Model1.drawio.png)
+
 ## Pipeline Stages
 
 The `combined_pipeline.py` script executes the following major steps for each RGB-NIR image pair:
