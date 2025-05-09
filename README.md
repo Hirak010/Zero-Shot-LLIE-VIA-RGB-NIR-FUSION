@@ -174,6 +174,10 @@ python combined_pipeline.py \
     --fusion_hp_strength 0.7
 ```
 ## Citation
+
+If you use this code or ideas from the thesis in your research, please cite:
+
+```bibtex
 @mastersthesis{Medhi2025Thesis,
   author       = {Hirakjyoti Medhi},
   title        = {Zero-Shot Low-Light Image Enhancement via {RGB-NIR} Implicit Fusion},
