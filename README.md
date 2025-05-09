@@ -55,7 +55,7 @@ This project was tested using the **[DATASET_NAME_HERE]**. You will need to down
 
 1.  **Download the dataset:**
     *   You can download the dataset from the following link:
-        [Download [DATASET_NAME_HERE]]([(https://drive.google.com/drive/folders/13yNug9MPXR1nqLD2K9R2QDxbNnoDXvjI?usp=drive_link)])
+        [Download [DATASET_NAME_HERE]]([https://drive.google.com/drive/folders/13yNug9MPXR1nqLD2K9R2QDxbNnoDXvjI?usp=drive_link])
     *   *(Optional: Add any specific instructions about the download, e.g., if registration is required, if it's a large file, if it's split into parts, etc.)*
 
 2.  **Extract the dataset (if applicable):**
